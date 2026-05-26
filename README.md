@@ -1,9 +1,5 @@
 # OLED-Video-Player
 
-================================================================================
-   ESP32 + OLED VIDEO PLAYER – COMPLETE GUIDE
-   Convert any video to play on a 0.96" OLED display
-================================================================================
 
 # What you need:
 --------------
@@ -14,9 +10,9 @@
 - USB cable for ESP32
 - Video file (MP4, AVI, MOV, etc.) – keep it short (5‑10 seconds)
 
-================================================================================
+
 # PART 1 – INSTALL REQUIRED SOFTWARE
-================================================================================
+
 
 1. Install Python (if not already):
    - Download from https://www.python.org/downloads/
@@ -47,9 +43,9 @@
    - Sketch > Include Library > Manage Libraries
    - Search and install: "Adafruit GFX Library" and "Adafruit SSD1306"
 
-================================================================================
+
 # PART 2 – PREPARE THE CONVERSION SCRIPT
-================================================================================
+
 
 1. Create a new folder on your PC, e.g. "VideoToOLED"
 
@@ -64,9 +60,9 @@
    - Adjust DURATION (seconds to convert) – e.g., 5 for first 5 seconds
    - Leave resolution 128x64 (OLED native)
 
-================================================================================
+
 # PART 3 – RUN THE CONVERSION
-================================================================================
+
 
 1. Open a terminal / CMD in that folder (shift+right-click > Open PowerShell / Terminal).
 
@@ -76,9 +72,8 @@
 3. Wait – FFmpeg will extract frames, then the script will convert them.
    When finished, you will see a file "video_frames.h" in the same folder.
 
-================================================================================
 # PART 4 – UPLOAD TO ESP32 AND PLAY THE VIDEO
-================================================================================
+
 
 1. Open Arduino IDE and create a new sketch (File > New).
 
@@ -104,9 +99,9 @@
 
 7. After upload, the video will play on the OLED with a 3‑second countdown before each loop!
 
-================================================================================
+
 # TROUBLESHOOTING
-================================================================================
+
 
 - "SSD1306 allocation failed": Check I2C wiring (SDA=GPIO21, SCL=GPIO22). Try address 0x3D.
 - "video_frames.h: No such file": Put the header file in the same folder as your .ino.
@@ -116,6 +111,5 @@
 - FFmpeg not found: Install FFmpeg and add to PATH, or use full path in the script.
 - No frames extracted: Check that your video file exists and FFmpeg works (test with "ffmpeg -i video.mp4").
 
-================================================================================
-END OF INSTRUCTIONS
-================================================================================
+
+
